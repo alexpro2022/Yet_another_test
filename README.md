@@ -80,7 +80,7 @@ cd .. && rm -fr Yet_another_test
 
 <br>
 
-## Авторы:
+## Автор:
 [Aleksei Proskuriakov](https://github.com/alexpro2022)
 
 [⬆️В начало](#yet_another_test)
