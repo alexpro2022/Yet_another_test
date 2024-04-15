@@ -1,6 +1,7 @@
 from typing import TypeAlias
 
 Items: TypeAlias = list[int]
+Strings: TypeAlias = list[str]
 
 
 def unique_items(items: Items) -> Items:
@@ -39,6 +40,20 @@ def eratosthenes_sieve(min: int = 0, max: int = 30) -> Items:
                 j = j + i
         i += 1
     return [item for item in primes if item and item >= min]
+
+
+def sorting_strings(strings: Strings, desc: bool = False) -> Strings:
+    """
+    4. Написать программу, которая сортирует список строк по длине,
+    сначала по возрастанию, а затем по убыванию.
+
+    >>> sorting_strings(['asdfgh', 'a', 'asdfghjkl', 'asd', 'as'])
+    ['a', 'as', 'asd', 'asdfgh', 'asdfghjkl']
+
+    >>> sorting_strings(['asdfgh', 'a', 'asdfghjkl', 'asd', 'as'], desc=True)
+    ['asdfghjkl', 'asdfgh', 'asd', 'as', 'a']
+    """
+    return sorted(strings, key=lambda string: len(string), reverse=desc)
 
 
 if __name__ == "__main__":
